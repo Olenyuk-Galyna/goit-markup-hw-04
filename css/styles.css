@@ -1,38 +1,58 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
 ul,
 ol {
-    list-style-item: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
-li {
-    background-color: #FFFFFF;
-}
+
 a {
     color: #2E2F42;
     text-decoration: none;
 }
+
 button {
     cursor: pointer;
 }
+
 .raleway {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
+
 .roboto-regular {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
 .roboto-medium {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
+
 .roboto-bold {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -41,6 +61,27 @@ body {
     line-height: 1.5;
     background-color: #FFFFFF;
 }
+
+.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.page-header-container {
+    display: flex;
+    align-items: center;
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo-header {
+    margin-right: 76px;
+}
+
 .page-logo {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -50,72 +91,143 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
+
 .nav-studio {
-    color:#2e2f42;
+    color: #2e2f42;
 }
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .menu .menu-link {
     font-size: 16px;
     font-weight: 500;
     color: #2E2F42;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0;
+    display: block;
 }
+
 .menu .menu-link:hover,
 .menu .menu-link:focus {
-    color:#404bbf;
+    color: #404bbf;
 }
+
 .contact-block {
     font-style: normal;
+    margin-left: auto;
 }
+
+.contact-list {
+    display: flex;
+    gap: 40px;
+}
+
 .contact-list-link {
     font-size: 16px;
     font-weight: 400;
     color: #434455;
     line-height: 1.5;
     letter-spacing: 0.02em;
-}  
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
 .contact-list-link:hover,
 .contact-list-link:focus {
     color: #404bbf;
 }
+
+.page-hero-container .btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-hero-container .hero-title {
+    max-width: 496px;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .hero {
     background-color: #2e2f42;
+    padding: 188px 0;
 }
+
 .hero-title {
     font-size: 56px;
     font-weight: 700;
-    text-align: center;
     color: #ffffff;
     line-height: 1.07;
     letter-spacing: 0.02em;
     background-color: #2e2f42;
+    align-items: center;
 }
+
 .hero .btn {
+    min-width: 169px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    padding: 16px 32px;
     letter-spacing: 0.04em;
     font-family: inherit;
-    color: #ffffff; 
+    color: #ffffff;
     background-color: #4D5AE5;
-}    
+    border: none;
+    border-radius: 4px;
+}
+
 .hero .btn:hover,
 .hero .btn:focus {
     background-color: #404BBF;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.advantages-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+li.advantages-list-item {
+    width: calc((100% - 72px) / 4);
+}
+
 .advantages-list-title {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
+
 .advantages-list-text {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
 .section-title {
     font-size: 36px;
     font-weight: 700;
@@ -124,65 +236,123 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
+    margin-top: 240px;
+    margin-bottom: 72px;
+    margin: 0;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .team {
+    display: flex;
     background-color: #F4F4FD;
+    align-items: center;
 }
+
+.team .cards {
+    padding: 32px 0;
+}
+
+li.team-list-item {
+    width: calc((100% - 72px) / 4);
+}
+
+li.team-list-item {
+    border-radius: 0 0 4px 4px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.team-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
 .team-list-fullname {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    background-color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 8px;
 }
+
 .team-list-text {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 8px;
 }
+
 .section-title {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.11;
-    text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
+    margin-bottom: 72px;
 }
+
+li.portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+}
+
+.portfolio .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+
+.portfolio .card-project {
+    padding: 32px 16px 32px 16px;
+    gap: 8px;
+    border: 1px solid#e7e9fc;
+    border-top: none;
+}
+
 .portfolio-list-fullname {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
+
 .portfolio-list-text {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
 .page-footer {
     background-color: #2e2f42;
+    padding: 100px 0;
 }
-.page-logo {
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #4d5ae5;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+
+#page-logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
+
 .page-list-text {
+    max-width: 264px;
     font-size: 16px;
     font-weight: 400;
     color: #f4f4fd;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
 .page-logo .studio {
     color: #f4f4fd;
 }
