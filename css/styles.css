@@ -46,13 +46,11 @@ button {
     font-weight: 500;
     font-style: normal;
 }
-
 .roboto-bold {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
-
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -61,27 +59,22 @@ body {
     line-height: 1.5;
     background-color: #FFFFFF;
 }
-
 .container {
     width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
-
 .page-header-container {
     display: flex;
     align-items: center;
 }
-
 .page-nav {
     display: flex;
     align-items: center;
 }
-
 .logo-header {
     margin-right: 76px;
 }
-
 .page-logo {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -91,17 +84,14 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
-
 .nav-studio {
     color: #2e2f42;
 }
-
 .menu {
     display: flex;
     align-items: center;
     gap: 40px;
 }
-
 .menu .menu-link {
     font-size: 16px;
     font-weight: 500;
@@ -111,22 +101,33 @@ body {
     padding: 24px 0;
     display: block;
 }
-
+.menu .current {
+    position: relative;
+    color: #404BBF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu .current::after {
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+}
 .menu .menu-link:hover,
 .menu .menu-link:focus {
     color: #404bbf;
 }
-
 .contact-block {
     font-style: normal;
     margin-left: auto;
 }
-
 .contact-list {
     display: flex;
     gap: 40px;
 }
-
 .contact-list-link {
     font-size: 16px;
     font-weight: 400;
@@ -135,6 +136,7 @@ body {
     letter-spacing: 0.02em;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list-link:hover,
@@ -147,29 +149,32 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
 .page-hero-container .hero-title {
     max-width: 496px;
     margin-bottom: 48px;
     margin-left: auto;
     margin-right: auto;
 }
-
 .hero {
-    background-color: #2e2f42;
+    max-width: 1440px;
+    height: 600px;
+   display: flex;
+   align-items: center;
     padding: 188px 0;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 .hero-title {
     font-size: 56px;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.07;
     letter-spacing: 0.02em;
-    background-color: #2e2f42;
     align-items: center;
 }
-
 .hero .btn {
     min-width: 169px;
     font-weight: 500;
@@ -180,15 +185,16 @@ body {
     font-family: inherit;
     color: #ffffff;
     background-color: #4D5AE5;
+    stroke: #4D5AE5;
     border: none;
     border-radius: 4px;
 }
-
 .hero .btn:hover,
 .hero .btn:focus {
     background-color: #404BBF;
+    stroke: #404BBF;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -201,17 +207,29 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
 .advantages-list {
     display: flex;
     align-items: center;
     gap: 24px;
 }
-
+.advantages-list .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
 li.advantages-list-item {
     width: calc((100% - 72px) / 4);
 }
-
+.icon {
+    display: inline-flex;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background-color: #F4F4FD;
+}
 .advantages-list-title {
     font-size: 20px;
     font-weight: 500;
@@ -248,22 +266,24 @@ img {
 }
 
 .team {
+    max-width: 1440px;
+    height: 780px;
     display: flex;
     background-color: #F4F4FD;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 .team .cards {
     padding: 32px 0;
 }
-
 li.team-list-item {
     width: calc((100% - 72px) / 4);
 }
-
 li.team-list-item {
     border-radius: 0 0 4px 4px;
     background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 6px 0px #2E2F42, 0px 1px 1px 0px #2E2F42, 0px 2px 1px 0px #2E2F42;
 }
 
 .team-list {
@@ -281,7 +301,6 @@ li.team-list-item {
     text-align: center;
     margin-bottom: 8px;
 }
-
 .team-list-text {
     font-size: 16px;
     font-weight: 400;
@@ -290,7 +309,6 @@ li.team-list-item {
     text-align: center;
     margin-bottom: 8px;
 }
-
 .section-title {
     font-size: 36px;
     font-weight: 700;
@@ -300,24 +318,47 @@ li.team-list-item {
     color: #2e2f42;
     margin-bottom: 72px;
 }
-
 li.portfolio-list-item {
     width: calc((100% - 48px) / 3);
+    position: relative;
 }
-
 .portfolio .portfolio-list {
     display: flex;
     flex-wrap: wrap;
     gap: 48px 24px;
 }
-
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    transform: translatey(-100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay:hover {
+    transform: translatex(0);
+}
+Li.portfolio-list-item .overlay {
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.overlay p {
+    color: #F4F4FD;
+    padding: 40px 32px;
+    margin: auto;
+    font-size: 16px;
+}
 .portfolio .card-project {
     padding: 32px 16px 32px 16px;
     gap: 8px;
     border: 1px solid#e7e9fc;
     border-top: none;
+    box-shadow: 0px 1px 6px 0px #2E2F42, 0px 1px 1px 0px #2E2F42, 0px 2px 1px 0px #2E2F42;
 }
-
 .portfolio-list-fullname {
     font-size: 20px;
     font-weight: 500;
@@ -326,24 +367,24 @@ li.portfolio-list-item {
     color: #2e2f42;
     margin-bottom: 8px;
 }
-
 .portfolio-list-text {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-
 .page-footer {
+    max-width: 1440px;
+    height: 312px;
     background-color: #2e2f42;
     padding: 100px 0;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 #page-logo {
     display: inline-block;
     margin-bottom: 16px;
 }
-
 .page-list-text {
     max-width: 264px;
     font-size: 16px;
@@ -352,7 +393,35 @@ li.portfolio-list-item {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-
 .page-logo .studio {
     color: #f4f4fd;
 }
+.social-list-icons {
+    max-width: 208px;
+    fill: #f4f4fd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: translate(-50%, -50%);
+}
+.social-list-text {
+    display: flex;
+   max-width: 96px; 
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+footer .social-list-link {
+    display: flex;
+    stroke: #4D5AE5;
+    line-height: 0;
+    transition: stroke cubic-bezier(0.4, 0, 0.2, 1);
+}
+footer .social-list-link:hover,
+footer .social-list-link:focus {
+    stroke: #404BBF;
+}
+
+
