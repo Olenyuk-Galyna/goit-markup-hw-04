@@ -18,7 +18,10 @@ ol {
     margin: 0;
     list-style-type: none;
 }
-
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
 a {
     color: #2E2F42;
     text-decoration: none;
@@ -157,9 +160,6 @@ body {
 }
 .hero {
     max-width: 1440px;
-    height: 600px;
-   display: flex;
-   align-items: center;
     padding: 188px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpg);
     background-repeat: no-repeat;
@@ -216,14 +216,13 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 24px 100px;
     margin-bottom: 8px;
     column-gap: 8px;
-    width: 264px;
     height: 112px;
     border-radius: 4px;
     border: 1px solid #8E8F99;
     background-color: #F4F4FD;
+    justify-content: center;
 }
 li.advantages-list-item {
     width: calc((100% - 72px) / 4);
@@ -281,9 +280,13 @@ li.team-list-item {
     align-items: center;
     gap: 24px;
 }
-.box .icons {
+ul.box {
     display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 32px;
 }
+
 .team-list-fullname {
     font-size: 20px;
     font-weight: 500;
@@ -301,6 +304,15 @@ li.team-list-item {
     text-align: center;
     margin-bottom: 8px;
 }
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+}
 .section-title {
     font-size: 36px;
     font-weight: 700;
@@ -315,8 +327,6 @@ li.portfolio-list-item {
 }
 .portfolio-list-item:hover .overlay {
      transform: translatex(0);
-}
-.portfolio-list-item {
 }
 .portfolio .portfolio-list {
     display: flex;
@@ -365,12 +375,8 @@ li.portfolio-list-item {
     letter-spacing: 0.02em;
 }
 .page-footer {
-    max-width: 1440px;
-    height: 312px;
     background-color: #2e2f42;
     padding: 100px 0;
-    margin-left: auto;
-    margin-right: auto;
 }
 #page-logo {
     display: inline-block;
@@ -388,23 +394,30 @@ li.portfolio-list-item {
     color: #f4f4fd;
 }
 li.icons {
-    display: flex;
     width: 40px;
     height: 40px;
 }
-
-.social-list-text {
-    display: flex;
-   max-width: 96px; 
+footer .social-list-text {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+    margin-bottom: 16px;
+    margin-right: 120px;
 }
-
+.container .footer-container {
+    display: flex;
+    align-items: baseline;
+}
 footer .social-list-link {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
     stroke: #4D5AE5;
     line-height: 0;
     transition: stroke cubic-bezier(0.4, 0, 0.2, 1);
