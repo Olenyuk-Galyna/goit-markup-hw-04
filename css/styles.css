@@ -428,7 +428,7 @@ footer .social-list-text {
 .container.footer-container {
     display: flex;
     align-items: baseline;
-    gap: 16px;
+   gap: 16px;
 }
 footer .social-list-link {
     display: flex;
